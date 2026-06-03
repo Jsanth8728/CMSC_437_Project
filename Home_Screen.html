@@ -14,11 +14,11 @@
                 min-height: 100vh;
                 background-repeat: no-repeat;
                 background-size: cover;
-                background: linear-gradient(90deg, #7a7aff, rgb(0, 0, 116));
+                background: linear-gradient(90deg, #4d4da1, rgb(0, 0, 116));
                 margin: 0%;
             }
             .menu{
-                background-color: black;
+                background-color: #282858;
                 display: block;
                 width: max-content;
                 height: 100vh;
@@ -43,7 +43,7 @@
                 margin: 0 auto;
             }
             .clapboard-pic{
-                width: 70px;
+                /* width: 70px; */
                 height: 70px;
                 object-fit: cover;
                 border-radius: 50%;
@@ -76,6 +76,17 @@
                         </span>
                         <span>
                             <a href = "#">Shopping</a>
+                        </span>
+                    </span>
+                );
+            }
+            function first(){
+                return(
+                    <span class = "top_bar" id = "top_bar">
+                        <span>
+                            <a href = "#">
+                                Hello!    
+                            </a>    
                         </span>
                     </span>
                 );
