@@ -2,102 +2,25 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>Test</title>
-        <!-- <link rel="stylesheet" href="index.css"> -->
+        <title>Home Page</title>
+        <link rel="stylesheet" href="Home_Screen.css">
         <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <!-- Don't use this in production: -->
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         
-        <style>
-            body{
-                min-height: 100vh;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background: linear-gradient(90deg, #4d4da1, rgb(0, 0, 116));
-                margin: 0%;
-            }
-            .menu{
-                background-color: #282858;
-                display: block;
-                width: max-content;
-                height: 100vh;
-
-            }
-            .menu span{
-                display: block;
-                /*padding: .5rem*/;
-            }
-            .menu span a {
-                color: white;
-            }
-            .menu :hover{
-                background-color: grey;
-            }
-            .profile-pic {
-                width: 70px;
-                height: 70px;
-                object-fit: cover;
-                border-radius: 50%;
-                display: block;
-                margin: 0 auto;
-            }
-            .clapboard-pic{
-                /* width: 70px; */
-                height: 70px;
-                object-fit: cover;
-                border-radius: 50%;
-                display: block;
-                margin: 0 auto;
-            }
-        </style>
-
-
+        <script src="Home_Screen.js" type = "text/babel"></script>
     </head>
     
     <body>
         <div id="root"></div>
         <script type = "text/babel">
-            function Second(){
-                return(
-                    <span class = "menu" id = "menu">
-                        <span>
-                            <a href = "#">
-                                <img src = "profilepic.png" alt = "Profile" className="profile-pic" />
-                            </a>
-                        </span>
-                        <span>
-                            <a href = "#">
-                                <img src = "Clapboard.png" alt = "Entertainment" className="clapboard-pic" />    
-                            </a>
-                        </span>
-                        <span>
-                            <a href = "#">Flight Information</a>
-                        </span>
-                        <span>
-                            <a href = "#">Shopping</a>
-                        </span>
-                    </span>
-                );
-            }
-            function first(){
-                return(
-                    <span class = "top_bar" id = "top_bar">
-                        <span>
-                            <a href = "#">
-                                Hello!    
-                            </a>    
-                        </span>
-                    </span>
-                );
-            }
-            function MyApp(){
-                return(<Second />);
-            }
             const container = document.getElementById('root');
             const root = ReactDOM.createRoot(container);
             root.render(<MyApp />);
+            function MyApp(){
+                return(<HomePage />);
+            }
         </script>
-        <!-- <img src = "profilepic.png"> </img> -->
     </body>
 </html>

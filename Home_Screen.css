@@ -1,0 +1,77 @@
+body{
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(90deg, #4d4da1, rgb(0, 0, 116));
+    margin: 0%;
+}
+.menu{
+    background-color: #282858;
+    display: block;
+    width: max-content;
+    height: 100vh;
+}
+.menu span{
+    display: block;
+    padding: 1rem;
+}
+.menu span:hover {
+    background-color: grey;
+}
+.menu span:active {
+    background-color: rgb(49, 49, 49);
+}
+
+.homepage{
+    display: flex;
+    align-items: flex-start;
+}
+
+.topbar{
+    flex: 1;
+    padding: 1rem;
+}
+
+/* Pictures */
+.profile-pic {
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.clapboard-pic{
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.airplane-pic{
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.shopping-pic{
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.food-pic{
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.help-pic{
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
