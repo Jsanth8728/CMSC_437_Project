@@ -25,11 +25,14 @@ body{
 .homepage{
     display: flex;
     align-items: flex-start;
+    overflow-x: hidden;
 }
 
 .topbar{
     flex: 1;
     padding: 1rem;
+    min-width: 0;
+    overflow-x: hidden;
 }
 
 /* Pictures */
