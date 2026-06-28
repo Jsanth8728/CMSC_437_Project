@@ -111,6 +111,20 @@ body{
     padding:15px;
 }
 
+.favorite-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.favorite-item img{
+    width:50px;
+    height:50px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
 /* ---------------- Right Panel ---------------- */
 
 .right-column{
