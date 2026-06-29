@@ -10,14 +10,36 @@ buttons.forEach(button => {
 
         const favorites = document.getElementById("favorites-list");
 
+        // Create favorite container
         const favorite = document.createElement("div");
         favorite.className = "favorite-item";
 
-        favorite.innerHTML = `
-            <img src="${image}" alt="${title}">
-            <span>${title}</span>
-        `;
+        // Create image
+        const img = document.createElement("img");
+        img.src = image;
+        img.alt = title;
 
+        // Create title
+        const span = document.createElement("span");
+        span.className = "favorite-title";
+        span.textContent = title;
+
+        // Create remove button
+        const removeButton = document.createElement("button");
+        removeButton.className = "remove-btn";
+        removeButton.textContent = "✕";
+
+        // Remove favorite when X is clicked
+        removeButton.addEventListener("click", function () {
+            favorite.remove();
+        });
+
+        // Add everything to the favorite
+        favorite.appendChild(img);
+        favorite.appendChild(span);
+        favorite.appendChild(removeButton);
+
+        // Add favorite to the list
         favorites.appendChild(favorite);
     });
 });
