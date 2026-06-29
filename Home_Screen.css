@@ -2,6 +2,7 @@ body{
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family:Arial, Helvetica, sans-serif;
     background: linear-gradient(90deg, #4d4da1, rgb(0, 0, 116));
     margin: 0%;
 }

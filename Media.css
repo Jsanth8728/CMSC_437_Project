@@ -87,11 +87,6 @@ body{
     width:110px;
 }
 
-.back-button{
-    width:90px;
-    cursor:pointer;
-}
-
 .announcement,
 .eta,
 .login,

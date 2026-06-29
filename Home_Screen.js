@@ -6,6 +6,10 @@ function goToHomePage() {
     window.location.href = "Home_Screen.html";
 }
 
+function goToLoginPage() {
+    window.location.href = "Login_Screen.html";
+}
+
 function HomePage() {
     return (
         <div className="homepage" id="home">
@@ -72,11 +76,12 @@ function HomePage() {
 
             <div className="topbar">
                 <div className="media-banner">
+                    
                     <div className="announcement">Announcements</div>
 
                     <div className="eta">ETA</div>
 
-                    <div className="login">Login</div>
+                    <button className="login" onClick={goToLoginPage}>Login</button>
 
                 </div>
             </div>
