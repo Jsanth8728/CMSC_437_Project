@@ -17,6 +17,7 @@ body{
 }
 .menu span:hover {
     background-color: grey;
+    cursor: pointer;
 }
 .menu span:active {
     background-color: rgb(49, 49, 49);
@@ -77,4 +78,58 @@ body{
     border-radius: 50%;
     display: block;
     margin: 0 auto;
+}
+
+.back-button {
+    width: 90px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.media-banner{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.announcement{
+    flex:1;
+}
+
+.eta{
+    width:90px;
+}
+
+.login{
+    width:110px;
+}
+
+.announcement,
+.eta,
+.login{
+    background:white;
+    border:2px solid black;
+    border-radius:10px;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+.login{
+    cursor: pointer;
+}
+
+.login:hover{
+    background-color:rgb(235, 179, 12);
+    color:white;
 }
