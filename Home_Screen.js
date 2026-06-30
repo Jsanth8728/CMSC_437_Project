@@ -7,10 +7,20 @@ function goToHomePage() {
 }
 
 function goToLoginPage() {
-    window.location.href = "Login_Screen.html";
-}
+    if (localStorage.getItem("loggedIn") === "true") {
+        //Display logout button
+        localStorage.setItem("loggedIn", "false");
+        window.location.reload();
+    }
+
+    else {
+        window.location.href = "Login_Screen.html";
+    }
+}   
 
 function HomePage() {
+    const loggedIn = localStorage.getItem("loggedIn") === "true";
+
     return (
         <div className="homepage" id="home">
             <span className="menu" id="menu">
@@ -76,12 +86,11 @@ function HomePage() {
 
             <div className="topbar">
                 <div className="media-banner">
-                    
                     <div className="announcement">Announcements</div>
-
                     <div className="eta">ETA</div>
-
-                    <button className="login" onClick={goToLoginPage}>Login</button>
+                    <button className="login" onClick={goToLoginPage}>
+                        {loggedIn ? "Logout" : "Login"}
+                    </button>
 
                 </div>
             </div>
