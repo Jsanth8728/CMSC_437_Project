@@ -10,6 +10,16 @@ buttons.forEach(button => {
 
         const favorites = document.getElementById("favorites-list");
 
+        //check for duplicates
+        const existingFavorites = favorites.querySelectorAll(".favorite-title");
+
+        for (const favoriteTitle of existingFavorites) {
+            if (favoriteTitle.textContent === title) {
+                alert("This item is already in your favorites.");
+                return;
+            }
+        }
+
         // Create favorite container
         const favorite = document.createElement("div");
         favorite.className = "favorite-item";
