@@ -18,10 +18,14 @@ function goToHelp(){
     window.location.href = "Help.html";
 }
 
+function goToProfile()
+{
+    window.location.href = "Profile.html";
+}
+
 function showETA() {
     return "ETA: 2:30 PM CEST";
 }
-
 
 function showTopBar() {
     return (
@@ -49,6 +53,7 @@ function HomePage() {
                             src="images/profilepic.png"
                             alt="Profile"
                             className="profile-pic"
+                            onClick={goToProfile}
                         />
                     </a>
                 </span>
