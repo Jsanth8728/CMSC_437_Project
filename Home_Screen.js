@@ -1,63 +1,85 @@
+function goToMediaPage() {
+    window.location.href = "Media.html";
+}
 
-function HomePage(){
-    return(
-        <div class = "homepage" id = "home">
-            <span class="menu" id="menu">
+function goToHomePage() {
+    window.location.href = "Home_Screen.html";
+}
+
+function showTopBar() {
+    return (<div className="topbar">
+        <div className="announcement">Announcements</div>
+        <div className="eta">ETA</div>
+        <button onclick="window.location.href='Login.html'" className="login">Login</button>
+        <button onclick="window.location.href='Home_Screen.html'" className="back-button">Back</button>
+    </div>);
+}
+
+function HomePage() {
+    return (
+        <div className="homepage" id="home">
+            <span className="menu" id="menu">
                 <span>
                     <a href="#">
-                        <img 
-                        src="images/profilepic.png" 
-                        alt="Profile" 
-                        className="profile-pic" />
+                        <img
+                            src="images/profilepic.png"
+                            alt="Profile"
+                            className="profile-pic"
+                        />
                     </a>
                 </span>
+
+                <span>
+                    <img
+                        src="images/Clapboard.png"
+                        alt="Entertainment"
+                        className="clapboard-pic"
+                        onClick={goToMediaPage}
+                    />
+                </span>
+
                 <span>
                     <a href="#">
-                        <img src="images/Clapboard.png" 
-                        alt="Entertainment" 
-                        className="clapboard-pic" 
-                        onClick = {goToMediaPage}/>
+                        <img
+                            src="images/AirplaneIcon.png"
+                            alt="Airplane"
+                            className="airplane-pic"
+                        />
                     </a>
                 </span>
+
                 <span>
                     <a href="#">
-                        <img src="images/AirplaneIcon.png" 
-                        alt="Airplane" 
-                        className="airplane-pic" />
+                        <img
+                            src="images/ShoppingBag.png"
+                            alt="Shopping"
+                            className="shopping-pic"
+                        />
                     </a>
                 </span>
+
                 <span>
                     <a href="#">
-                        <img src="images/ShoppingBag.png" 
-                        alt="Shopping" 
-                        className="shopping-pic" />
+                        <img
+                            src="images/ForkKnife.png"
+                            alt="Food and Beverage"
+                            className="food-pic"
+                        />
                     </a>
                 </span>
+
                 <span>
                     <a href="#">
-                        <img src="images/ForkKnife.png" 
-                        alt="Food and Beverage" 
-                        className="food-pic" />
-                    </a>
-                </span>
-                <span>
-                    <a href="#">
-                        <img src="images/Help.png" 
-                        alt="Help" 
-                        className="help-pic" />
+                        <img
+                            src="images/Help.png"
+                            alt="Help"
+                            className="help-pic"
+                        />
                     </a>
                 </span>
             </span>
-            <div class = "topbar" id = "topbar">
-                <p>Hello World</p>
-            </div>
-        </div>
-    );
-}
-function TopBar(){
-    
-}
 
-function goToMediaPage() {
-    window.location.href="Media.html"
+            <div class="main">{showTopBar()}</div>
+            </div>
+    );
 }
