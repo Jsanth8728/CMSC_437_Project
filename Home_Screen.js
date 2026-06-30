@@ -6,32 +6,33 @@ function goToHomePage() {
     window.location.href = "Home_Screen.html";
 }
 function goToTravelPage() {
-    window.location.href = "Home_Screen.html";
+    window.location.href = "Travel.html";
 }
-function goToHomePage() {
-    window.location.href = "Home_Screen.html";
+function goToShopping() {
+    window.location.href = "Shopping.html";
 }
-function goToHomePage() {
-    window.location.href = "Home_Screen.html";
+function goToFood() {
+    window.location.href = "Food.html";
 }
+function goToHelp(){
+    window.location.href = "Help.html";
+}
+
+function showETA() {
+    return "ETA: 2:30 PM CEST";
+}
+
 
 function showTopBar() {
     return (
         <div className="topbar">
             <div className="announcement">Announcements</div>
-            <div className="eta">ETA</div>
-
-            <button
-                className="login"
+            <div className="eta" id="eta">{showETA()}</div>
+            <button className="login"
                 onClick={() => window.location.href = "Login.html"}
-            >
-                Login
-            </button>
-
-            <button
-                className="back-button"
-                onClick={() => window.location.href = "Home_Screen.html"}
-            >
+            >Login</button>
+            <button className="back-button"
+                onClick={() => window.location.href = "Home_Screen.html"}>
                 Back
             </button>
         </div>

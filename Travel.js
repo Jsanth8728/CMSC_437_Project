@@ -37,9 +37,12 @@ function showTimeD() {
 }
 
 function showETA() {
-    document.getElementById("eta").textContent = "ETA: 2:30 PM";
+    document.getElementById("eta").textContent = "ETA: 2:30 PM CEST";
 }
-
+function showETAF() {
+    document.getElementById("etaf").textContent = "ETA: 2:30 PM CEST";
+}
 document.addEventListener("DOMContentLoaded", showETA);
+document.addEventListener("DOMContentLoaded", showETAF)
 document.addEventListener("DOMContentLoaded", showTimeL);
 document.addEventListener("DOMContentLoaded", showTimeD);

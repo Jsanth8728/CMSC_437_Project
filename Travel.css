@@ -40,7 +40,7 @@ body{
     aspect-ratio: 1;
     border-radius: 2%;
 }
-.eta, .altitude, .speed, .time-local, .time-dest{
+.eta-flight, .altitude, .speed, .time-local, .time-dest{
     background-color: white;
     background: white;
     border: 2px solid black;
