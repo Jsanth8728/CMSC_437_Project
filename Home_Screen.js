@@ -5,14 +5,37 @@ function goToMediaPage() {
 function goToHomePage() {
     window.location.href = "Home_Screen.html";
 }
+function goToTravelPage() {
+    window.location.href = "Home_Screen.html";
+}
+function goToHomePage() {
+    window.location.href = "Home_Screen.html";
+}
+function goToHomePage() {
+    window.location.href = "Home_Screen.html";
+}
 
 function showTopBar() {
-    return (<div className="topbar">
-        <div className="announcement">Announcements</div>
-        <div className="eta">ETA</div>
-        <button onclick="window.location.href='Login.html'" className="login">Login</button>
-        <button onclick="window.location.href='Home_Screen.html'" className="back-button">Back</button>
-    </div>);
+    return (
+        <div className="topbar">
+            <div className="announcement">Announcements</div>
+            <div className="eta">ETA</div>
+
+            <button
+                className="login"
+                onClick={() => window.location.href = "Login.html"}
+            >
+                Login
+            </button>
+
+            <button
+                className="back-button"
+                onClick={() => window.location.href = "Home_Screen.html"}
+            >
+                Back
+            </button>
+        </div>
+    );
 }
 
 function HomePage() {
@@ -80,6 +103,6 @@ function HomePage() {
             </span>
 
             <div className="topbar">{showTopBar()}</div>
-            </div>
+        </div>
     );
 }
