@@ -79,7 +79,7 @@ function HomePage() {
                 </span>
             </span>
 
-            <div class="main">{showTopBar()}</div>
+            <div className="topbar">{showTopBar()}</div>
             </div>
     );
 }
