@@ -1,4 +1,3 @@
-
 function HomePage(){
     return(
         <div class = "homepage" id = "home">
@@ -19,12 +18,12 @@ function HomePage(){
                     </a>
                 </span>
                 <span>
-                    <a href="#">
+                    <a href="/ShoppingPage/Shopping_Page.html">
                         <img src="images/ShoppingBag.png" alt="Shopping" className="shopping-pic" />
                     </a>
                 </span>
                 <span>
-                    <a href="#">
+                    <a href="/FoodPage/Food_Page.html">
                         <img src="images/ForkKnife.png" alt="Food and Beverage" className="food-pic" />
                     </a>
                 </span>
