@@ -3,11 +3,9 @@
 .sidebar{
     width:90px;
     border-right:2px solid black;
-
     display:flex;
     flex-direction:column;
     align-items:center;
-
     padding-top:20px;
     gap:20px;
 }
@@ -47,8 +45,85 @@
 }
 
 .topbar{
-    flex: 1;
-    padding: 1rem;
-    min-width: 0;
-    overflow-x: hidden;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+/* ----------- Log In Elements ----------- */
+.login-container{
+    flex:1;
+    display:flex;
+    flex-direction:row;   
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    padding-top:90px;
+}
+
+.login-page{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    padding:40px;
+    box-sizing:border-box;
+}
+
+.guest-box,
+.login-box{
+    width:350px;
+    min-height:300px;
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+.guest-box h2,
+.login-box h2{
+    margin-top:0;
+    margin-bottom:20px;
+}
+
+.guest-box p{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* Login inputs */
+.login-box input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+/* Buttons */
+.login-btn,
+.guest-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#4d4da1;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.login-btn:hover,
+.guest-btn:hover{
+    background:#30308d;
 }
