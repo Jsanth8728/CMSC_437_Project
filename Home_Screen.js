@@ -68,6 +68,7 @@ function HomePage() {
                             src="images/AirplaneIcon.png"
                             alt="Airplane"
                             className="airplane-pic"
+                            onClick={goToTravelPage}
                         />
                     </a>
                 </span>
@@ -78,6 +79,7 @@ function HomePage() {
                             src="images/ShoppingBag.png"
                             alt="Shopping"
                             className="shopping-pic"
+                            onClick={goToShopping}
                         />
                     </a>
                 </span>
@@ -88,6 +90,7 @@ function HomePage() {
                             src="images/ForkKnife.png"
                             alt="Food and Beverage"
                             className="food-pic"
+                            onClick={goToFood}
                         />
                     </a>
                 </span>
@@ -98,6 +101,7 @@ function HomePage() {
                             src="images/Help.png"
                             alt="Help"
                             className="help-pic"
+                            onClick={goToHelp}
                         />
                     </a>
                 </span>
