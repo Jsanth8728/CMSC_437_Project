@@ -1,0 +1,229 @@
+.help-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.help-page > h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.helpSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 70vh;
+    background-color: #282858;
+    border-style: solid;
+    border-color: white;
+}
+
+.announcementsTab{
+    display: flex;
+    width: 20vw;
+    height: 30vh;
+    background-color: #5b5baf;
+    border-color: white;
+    border-style: solid;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    font-weight: bold;
+    border-radius: 7%;
+}
+
+.SafetyTab{
+    display: flex;
+    width: 20vw;
+    height: 30vh;
+    background-color: #4b4bac;
+    border-color: white;
+    border-style: solid;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    font-weight: bold;
+    border-radius: 7%;
+}
+
+.AttendentTab{
+    display: flex;
+    width: 20vw;
+    height: 30vh;
+    background-color: #3d3dac;
+    border-color: white;
+    border-style: solid;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    font-weight: bold;
+    border-radius: 7%;
+}
+
+.ReportTab{
+    display: flex;
+    width: 20vw;
+    height: 30vh;
+    background-color: #2e2ea5;
+    border-color: white;
+    border-style: solid;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    font-weight: bold;
+    border-radius: 7%;
+}
+
+.feedback-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.feedback-overlay.active {
+  display: flex;
+}
+
+.feedback-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.feedback-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+  margin-top: 1rem;
+}
+
+.announce-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.announce-overlay.active {
+  display: flex;
+}
+
+.announce-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.announce-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+  margin-top: 1rem;
+}
+
+.safety-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.safety-overlay.active {
+  display: flex;
+}
+
+.safety-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 60vw;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.safetyCard{
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    
+}
+
+.safety-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+  margin-top: 1rem;
+}
+
+.attendent-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.attendent-overlay.active {
+  display: flex;
+}
+
+.attendent-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.announce-box > p{
+    border-color: black;
+    border-bottom: solid;
+}
+
+.attendent-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+  margin-top: 1rem;
+}

@@ -1,6 +1,24 @@
+function Travel() {
+    return (<div>
+        <div>{showTopBar()}</div>
+        <div class="flightinfo">
+            <div class="flightmap">Flight Map
+                <img src="images/Map.png" alt="Flight Map" class="map" />
+            </div>
+            <div class="flighttext">
+                <div class="eta-flight"> {showETA()}</div>
+                <div class="altitude">Altitude: 35,000ft</div>
+                <div class="speed">Speed: 589mph </div>
+                <div class="time-local" id="local-time">{showTimeL()}</div>
+                <div class="time-dest" id="dest-time">{showTimeD()}</div>
+            </div>
+        </div>
+    </div>)
+}
+
 function showTimeL() {
     const now = new Date();
-
+ 
     const currentTime = now.toLocaleTimeString("en-US", {
         timeZone: "America/New_York",
         hour: "2-digit",
@@ -35,14 +53,3 @@ function showTimeD() {
 
     setInterval(showTimeD, 1000);
 }
-
-function showETA() {
-    document.getElementById("eta").textContent = "ETA: 2:30 PM CEST";
-}
-function showETAF() {
-    document.getElementById("etaf").textContent = "ETA: 2:30 PM CEST";
-}
-document.addEventListener("DOMContentLoaded", showETA);
-document.addEventListener("DOMContentLoaded", showETAF)
-document.addEventListener("DOMContentLoaded", showTimeL);
-document.addEventListener("DOMContentLoaded", showTimeD);

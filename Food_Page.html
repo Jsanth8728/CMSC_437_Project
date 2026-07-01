@@ -2,17 +2,15 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>Home Page</title>
-        <link rel="stylesheet" href="Home_Screen.css">
+        <title>Food and Drinks</title>
+        <link rel="stylesheet" href="Food_Page.css">
         <link rel="stylesheet" href="common.css">
         <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <!-- Don't use this in production: -->
         <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
-        
-        <script src="Home_Screen.js" type = "text/babel"></script>
-
-        <script src="common.js" type = "text/babel"></script>
+        <script src="common.js" type ="text/babel"></script>
+        <script src="Food_Page.js" type = "text/babel"></script>
     </head>
     
     <body>
@@ -22,7 +20,7 @@
             const root = ReactDOM.createRoot(container);
             root.render(<MyApp />);
             function MyApp(){
-                return(<HomePage />);
+                return(<FoodPage />);
             }
         </script>
     </body>
