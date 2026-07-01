@@ -1,0 +1,368 @@
+body{
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(90deg, #4d4da1, rgb(0, 0, 116));
+    margin: 0%;
+}
+
+.phonePage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.topBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.AnnouncementDropdown{
+    width:45%;
+    background-color: #282858;
+    color: white;
+    text-align: center;
+    font-size: 4vh;
+    border-style: outset;
+    border-image: initial;
+    border-color: grey;
+    border-width: 0.4vh;
+}
+
+.ETAButton{
+    width:25%;
+    Font-size: 4vh;
+    background-color: #282858;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.airplaneeta-pic{
+    width: 22vw;
+    height: 4vh;
+}
+
+.cartButton{
+    width:15%;
+    Font-size: 4vh;
+    background-color: #282858;
+}
+
+.shoppingcart-pic{
+    width: 3vw;
+    height: 4vh;
+}
+
+.menuButton{
+    width:15%;
+    Font-size: 4vh;
+    background-color: #282858;
+}
+
+.menuButton{
+    color: white;
+    font-style: bold;
+}
+
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 320px;
+    height: 100%;
+    background: rgb(134, 134, 134);
+    transition: right 0.3s ease;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cart-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.cart-items {
+    overflow-y: auto;
+    flex: 1;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart-remove-btn {
+    margin-left: 0.5rem;
+    color: red;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cart-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1050;
+}
+
+.cart-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    font-size: 1.5vh;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+.BuyNowButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-left: 4rem;
+    height: 5vh;
+    width: 8vw;
+    font-size: large;
+}
+
+.menu-panel {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: 1100;
+}
+
+.menu-panel.open {
+    left: 0;
+}
+
+.menu{
+    background-color: #282858;
+    display: block;
+    width: max-content;
+    height: 100vh;
+}
+.menu span{
+    display: block;
+    padding: 1rem;
+}
+.menu span:hover {
+    background-color: grey;
+}
+.menu span:active {
+    background-color: rgb(49, 49, 49);
+}
+
+/* Pictures */
+.profile-pic {
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.clapboard-pic{
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.airplane-pic{
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.shopping-pic{
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.food-pic{
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.help-pic{
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.phone-pic{
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1050;
+}
+
+.phoneSection{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(38, 38, 38, 0.765);
+}
+
+.OuterPhoneBox{
+    width: 50vw;
+    height: 90vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.InputSection{
+    width: 50vw;
+    height: 20vh;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    border-color: black;
+    border-style: solid;
+    border-width: .5vh;
+    align-items: center;
+    font-size: 10vh;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.NumbersSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding: 1vh;
+}
+
+.rows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 6vh;
+    padding: 3vh;
+}
+
+.number {
+    width: 10vh;
+    height: 10vh;
+    background-color: #282858;
+    color: white;
+    border-radius: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    cursor: pointer;
+    user-select: none;
+}
+
+.number:hover {
+    background-color: grey;
+}
+
+.number:active {
+    background-color: rgb(49, 49, 49);
+}
