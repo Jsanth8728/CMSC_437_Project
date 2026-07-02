@@ -109,9 +109,15 @@ function ShoppingPage(){
                 </div>
                 <h1>Airplane Memorabilia</h1>
                 <div className="scroll-panel">
-                    <div className="square" onClick={() => openModal("Airplane Item 1")}>1</div>
-                    <div className="square" onClick={() => openModal("Airplane Item 2")}>2</div>
-                    <div className="square" onClick={() => openModal("Airplane Item 3")}>3</div>
+                    <div className="square" onClick={() => openModal("Model Boeing 787")}>
+                        <img src = "images/airplanetoy.jpg" alt = "Model Boeing 787" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("AA Hoodie")}>
+                        <img src = "images/airlinesweatshirt.webp" alt = "AA Hoodie" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("AA Sweatshirt")}>
+                        <img src = "images/AASweatShirt2.webp" alt = "AA Sweatshirt" className = "toy"></img>
+                    </div>
                     <div className="square" onClick={() => openModal("Airplane Item 4")}>4</div>
                     <div className="square" onClick={() => openModal("Airplane Item 5")}>5</div>
                     <div className="square" onClick={() => openModal("Airplane Item 6")}>6</div>
@@ -175,7 +181,7 @@ function ShoppingPage(){
                         <input type="text" placeholder="CVV" />
                         <input type="text" placeholder="Exp. Date" />
                         <div className="credit-buttons">
-                            <button onClick={() => {clearCart(); closeCredit();}}>Pay</button>
+                            <button onClick={() => {clearCart(); closeCredit(); setCartOpen(false)}}>Pay</button>
                             <button onClick={closeCredit}>Back</button>
                         </div>
                     </div>

@@ -103,6 +103,12 @@ body{
     align-items: center;
     display: flex;
     cursor: pointer;
+    position: relative;
+}
+
+.toy{
+    width: 15vw;
+    height: 15vh;
 }
 
 .catalogSection > h1{
