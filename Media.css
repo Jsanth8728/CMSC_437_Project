@@ -1,6 +1,8 @@
 /* ---------------- Whole Page ---------------- */
 
 .media-content{
+    margin-top:25px;
+    margin-right:25px;
     flex:1;
     display:flex;
     gap:25px;
@@ -154,8 +156,32 @@
 .favorite-btn{
     width:100%;
     margin-top:15px;
-    padding:8px;
+    padding: 10px 14px;
     cursor:pointer;
+    border:none;
+    border-radius: 999px;
+    background:linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+
+.favorite-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.05);
+}
+
+.favorite-btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.favorite-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.4);
 }
 
 .metadata-popup {
