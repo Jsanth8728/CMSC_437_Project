@@ -162,14 +162,27 @@ function MediaPage() {
         }
     ];
 
-    const [favorites, setFavorites] = React.useState([]);
+    const [favorites, setFavorites] = React.useState(() => {
+    if (!isLoggedIn()) return [];
+
+        return JSON.parse(localStorage.getItem("favoriteMovies")) || [];
+    });
     
     function addFavorite(movie) {
-        // Don't add duplicates
-        if (favorites.some(f => f.title === movie.title))
-            return;
-        setFavorites([...favorites, movie]);
+    // Don't add duplicates
+    if (favorites.some(f => f.title === movie.title))
+        return;
+
+    const updatedFavorites = [...favorites, movie];
+    setFavorites(updatedFavorites);
+
+    if (isLoggedIn()) {
+        localStorage.setItem(
+            "favoriteMovies",
+            JSON.stringify(updatedFavorites)
+        );
     }
+}
 
     function removeFavorite(movieTitle) {
         setFavorites(
