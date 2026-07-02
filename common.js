@@ -11,6 +11,15 @@ function logout() {
 function showTopBar() {
     const [menuOpen, setMenuOpen] = React.useState(false);
     const isHomePage = (document.title === "Food and Drinks" || document.title === "Shopping" || document.title === "Phone");
+    
+    const [announceOpenTop, setAnnounceOpenTop] = React.useState(false);
+    function openAnnounceTop() {
+        setAnnounceOpenTop(true);
+    }
+    function closeAnnounceTop() {
+        setAnnounceOpenTop(false);
+    }
+      
     return (
         <div className="topbar" style={{ width: isHomePage ? "90%" : "100%" }}>
             {/* Menu Panel  */}
@@ -59,11 +68,26 @@ function showTopBar() {
                 <div className="menu-backdrop" onClick={() => setMenuOpen(false)}></div>
             )}
 
-            <button className="announcement">Announcements</button>
+            <button className="announcement" onClick = {openAnnounceTop}>Announcements</button>
             <button className="eta" id="eta"></button>
             {isLoggedIn() ? (<button className="login" onClick={logout}>Logout</button>) : 
                 (<button className="login" onClick={() => window.location.href = "Login_Screen.html"}>
                 Login</button>
+            )}
+
+            {announceOpenTop && (
+                <div className="announce-top-overlay active">
+                    <div className="announce-top-box">
+                        <h2>Announcements</h2>
+                        <p>Announcement 1</p>
+                        <p>Announcement 2</p>
+                        <p>Announcement 3</p>
+                        <p>Announcement 4</p>
+                        <div className="announce-top-buttons">
+                            <button onClick={closeAnnounceTop}>Back</button>
+                        </div>
+                    </div>
+                </div>
             )}
         </div>
     );

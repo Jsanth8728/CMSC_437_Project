@@ -170,15 +170,15 @@
   background: white;
   padding: 2rem;
   border-radius: 8px;
-  width: 60vw;
+  width: 55vw;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
 
 .safetyCard{
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 60%;
     border-style: solid;
     
 }
@@ -227,3 +227,4 @@
   gap: 1vw;
   margin-top: 1rem;
 }
+
