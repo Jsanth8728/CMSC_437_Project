@@ -8,7 +8,6 @@ React.useEffect(() => {
     }
 }, []);
 
-//  Displays top bar of all pages, used for navigating between pages
 function isLoggedIn() {
     return localStorage.getItem("loggedIn") === "true";
 }
@@ -18,6 +17,7 @@ function logout() {
     window.location.href = "Home_Screen.html";
 }
 
+//  Displays top bar of all pages, used for navigating between pages
 function showTopBar() {
     const [menuOpen, setMenuOpen] = React.useState(false);
     const isHomePage = (document.title === "Food and Drinks" || document.title === "Shopping" || document.title === "Phone");
@@ -79,7 +79,7 @@ function showTopBar() {
             )}
 
             <button className="announcement" onClick = {openAnnounceTop}>Announcements</button>
-            <button className="eta" id="eta"></button>
+            {/* <button className="eta" id="eta"></button> */}
             {isLoggedIn() ? (<button className="login" onClick={logout}>Logout</button>) : 
                 (<button className="login" onClick={() => window.location.href = "Login_Screen.html"}>
                 Login</button>
@@ -102,35 +102,6 @@ function showTopBar() {
         </div>
     );
 }
-
-let etaHours = 3;
-let etaMinutes = 30;
-let etaSeconds = 60;
-function showETA() {
-    const eta = document.getElementById("eta");
-    console.log("eta");
-    etaSeconds -= 1;
-   if (etaSeconds < 0) {
-        etaSeconds = 59;
-        etaMinutes--;
-    }
-
-    if (etaMinutes < 0) {
-        etaMinutes = 59;
-        etaHours--;
-    }
-
-    // stop at 0
-    if (etaHours < 0) {
-        etaHours = 0;
-        etaMinutes = 0;
-        etaSeconds = 0;
-    }
-    const formatted = String(etaHours).padStart(2, "0") + ":" +
-    String(etaMinutes).padStart(2, "0") + ":" + String(etaSeconds).padStart(2, "0");
-    eta.textContent = "ETA: " + formatted;
-}
-setInterval(showETA, 1000);
 
 function showCart() {
     const [selectedProduct, setSelectedProduct] = React.useState(null);
