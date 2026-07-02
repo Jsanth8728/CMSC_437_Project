@@ -1,4 +1,13 @@
-//  Displays top bar of all pages, used for navigating between pages
+ //sets dark mode 
+React.useEffect(() => {
+    const dark = localStorage.getItem("darkMode") === "true";
+    if (dark) {
+         document.body.classList.add("dark-mode");
+    } else {
+        document.body.classList.remove("dark-mode");
+    }
+}, []);
+
 function isLoggedIn() {
     return localStorage.getItem("loggedIn") === "true";
 }
@@ -8,9 +17,19 @@ function logout() {
     window.location.href = "Home_Screen.html";
 }
 
+//  Displays top bar of all pages, used for navigating between pages
 function showTopBar() {
     const [menuOpen, setMenuOpen] = React.useState(false);
     const isHomePage = (document.title === "Food and Drinks" || document.title === "Shopping" || document.title === "Phone");
+    
+    const [announceOpenTop, setAnnounceOpenTop] = React.useState(false);
+    function openAnnounceTop() {
+        setAnnounceOpenTop(true);
+    }
+    function closeAnnounceTop() {
+        setAnnounceOpenTop(false);
+    }
+      
     return (
         <div className="topbar" style={{ width: isHomePage ? "90%" : "100%" }}>
             {/* Menu Panel  */}
@@ -59,44 +78,30 @@ function showTopBar() {
                 <div className="menu-backdrop" onClick={() => setMenuOpen(false)}></div>
             )}
 
-            <button className="announcement">Announcements</button>
-            <button className="eta" id="eta"></button>
+            <button className="announcement" onClick = {openAnnounceTop}>Announcements</button>
+            {/* <button className="eta" id="eta"></button> */}
             {isLoggedIn() ? (<button className="login" onClick={logout}>Logout</button>) : 
                 (<button className="login" onClick={() => window.location.href = "Login_Screen.html"}>
                 Login</button>
             )}
+
+            {announceOpenTop && (
+                <div className="announce-top-overlay active">
+                    <div className="announce-top-box">
+                        <h2>Announcements</h2>
+                        <p>Announcement 1</p>
+                        <p>Announcement 2</p>
+                        <p>Announcement 3</p>
+                        <p>Announcement 4</p>
+                        <div className="announce-top-buttons">
+                            <button onClick={closeAnnounceTop}>Back</button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
-
-let etaHours = 3;
-let etaMinutes = 30;
-let etaSeconds = 60;
-function showETA() {
-    const eta = document.getElementById("eta");
-    console.log("eta");
-    etaSeconds -= 1;
-   if (etaSeconds < 0) {
-        etaSeconds = 59;
-        etaMinutes--;
-    }
-
-    if (etaMinutes < 0) {
-        etaMinutes = 59;
-        etaHours--;
-    }
-
-    // stop at 0
-    if (etaHours < 0) {
-        etaHours = 0;
-        etaMinutes = 0;
-        etaSeconds = 0;
-    }
-    const formatted = String(etaHours).padStart(2, "0") + ":" +
-    String(etaMinutes).padStart(2, "0") + ":" + String(etaSeconds).padStart(2, "0");
-    eta.textContent = "ETA: " + formatted;
-}
-setInterval(showETA, 1000);
 
 function showCart() {
     const [selectedProduct, setSelectedProduct] = React.useState(null);
