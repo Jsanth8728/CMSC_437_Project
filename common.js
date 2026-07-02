@@ -1,3 +1,13 @@
+ //sets dark mode 
+React.useEffect(() => {
+    const dark = localStorage.getItem("darkMode") === "true";
+    if (dark) {
+         document.body.classList.add("dark-mode");
+    } else {
+        document.body.classList.remove("dark-mode");
+    }
+}, []);
+
 //  Displays top bar of all pages, used for navigating between pages
 function isLoggedIn() {
     return localStorage.getItem("loggedIn") === "true";
