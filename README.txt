@@ -64,7 +64,6 @@ for the infotainment system.
 ANNOUNCEMENTS BAR
 The announcements bar can be clicked on to display:
     - announcements made throughout the flight
-    - ETA
     - Login page
 
 LOGIN PAGE 

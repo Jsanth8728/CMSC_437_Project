@@ -398,3 +398,8 @@ body{
   gap: 1vw;
   margin-top: 1rem;
 }
+
+.toy{
+    width: 15vw;
+    height: 17vh;
+}

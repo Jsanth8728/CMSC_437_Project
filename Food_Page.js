@@ -81,7 +81,7 @@ function FoodPage(){
           </div>
             <div className = "catalogSection">
                 <h1 className = "title">Food and Drink</h1>
-                <h1>Appetizers</h1>
+                {/* <h1>Appetizers</h1>
                 <div className="scroll-panel">
                     <div className="square" onClick={() => openModal("Appetizer 1")}>1</div>
                     <div className="square" onClick={() => openModal("Appetizer 2")}>2</div>
@@ -89,33 +89,69 @@ function FoodPage(){
                     <div className="square" onClick={() => openModal("Appetizer 4")}>4</div>
                     <div className="square" onClick={() => openModal("Appetizer 5")}>5</div>
                     <div className="square" onClick={() => openModal("Appetizer 6")}>6</div>
-                </div>
+                </div> */}
                 <h1>Entrees</h1>
                 <div className="scroll-panel">
-                    <div className="square" onClick={() => openModal("Entrees 1")}>1</div>
-                    <div className="square" onClick={() => openModal("Entrees 2")}>2</div>
-                    <div className="square" onClick={() => openModal("Entrees 3")}>3</div>
-                    <div className="square" onClick={() => openModal("Entrees 4")}>4</div>
-                    <div className="square" onClick={() => openModal("Entrees 5")}>5</div>
-                    <div className="square" onClick={() => openModal("Entrees 6")}>6</div>
+                    <div className="square" onClick={() => openModal("Roasted Tomato Pesto Omelet")}>
+                        <img src = "images/food1.avif" alt = "Roasted Tomato Pesto Omelet" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Bacon Sausage Breakfast Burrito")}>
+                        <img src = "images/food2.avif" alt = "Bacon Sausage Breakfast Burrito" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Chicago Patty Melt")}>
+                        <img src = "images/food3.avif" alt = "Chicago Patty Melt" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Cacio e Pepe Rigatoni")}>
+                        <img src = "images/food4.avif" alt = "Cacio e Pepe Rigatoni" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("SPAM Musubi")}>
+                        <img src = "images/food5.avif" alt = "SPAM Musubi" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Kalua Pork Sandwich")}>
+                        <img src = "images/food6.avif" alt = "Kalua Pork Sandwich" className = "toy"></img>
+                    </div>
                 </div>
                 <h1>Snacks</h1>
                 <div className="scroll-panel">
-                    <div className="square" onClick={() => openModal("Snacks 1")}>1</div>
-                    <div className="square" onClick={() => openModal("Snacks 2")}>2</div>
-                    <div className="square" onClick={() => openModal("Snacks 3")}>3</div>
-                    <div className="square" onClick={() => openModal("Snacks 4")}>4</div>
-                    <div className="square" onClick={() => openModal("Snacks 5")}>5</div>
-                    <div className="square" onClick={() => openModal("Snacks 6")}>6</div>
+                    <div className="square" onClick={() => openModal("Pringles")}>
+                        <img src = "images/snack1.webp" alt = "Pringles" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Muddy Bites Milk Chocolate")}>
+                        <img src = "images/snack2.avif" alt = "Muddy Bites Milk Chocolate" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Pop & Sol Sea Salt and Vinegar Nut Mix")}>
+                        <img src = "images/snack3.avif" alt = "Pop & Sol Sea Salt and Vinegar Nut Mix" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Vegobears Santa Monica")}>
+                        <img src = "images/snack4.avif" alt = "Vegobears Santa Monica" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Better Sour Mango Gummy Shells")}>
+                        <img src = "images/snack5.avif" alt = "Better Sour Mango Gummy Shells" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Diamond Bakery Guava Shortbread Cookies")}>
+                        <img src = "images/snack6.avif" alt = "Diamond Bakery Guava Shortbread Cookies" className = "toy"></img>
+                    </div>
                 </div>
                 <h1>Drinks</h1>
                 <div className="scroll-panel">
-                    <div className="square" onClick={() => openModal("Drinks 1")}>1</div>
-                    <div className="square" onClick={() => openModal("Drinks 2")}>2</div>
-                    <div className="square" onClick={() => openModal("Drinks 3")}>3</div>
-                    <div className="square" onClick={() => openModal("Drinks 4")}>4</div>
-                    <div className="square" onClick={() => openModal("Drinks 5")}>5</div>
-                    <div className="square" onClick={() => openModal("Drinks 6")}>6</div>
+                    <div className="square" onClick={() => openModal("Coca-Cola")}>
+                        <img src = "images/drink1.avif" alt = "Coca-Cola" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Sprite")}>
+                        <img src = "images/drink2.webp" alt = "Sprite" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Seagram's Ginger Ale")}>
+                        <img src = "images/drink3.avif" alt = "Seagram's Ginger Ale" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Seagram's Seltzer Water")}>
+                        <img src = "images/drink4.avif" alt = "Seagram's Seltzer Water" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Seagram's Tonic Water")}>
+                        <img src = "images/drink5.avif" alt = "Seagram's Tonic Water" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("AHA Sparkling Water")}>
+                        <img src = "images/drink6.avif" alt = "AHA Sparkling Water" className = "toy"></img>
+                    </div>
                 </div>
             </div>
 

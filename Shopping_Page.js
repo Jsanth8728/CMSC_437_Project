@@ -82,23 +82,48 @@ function ShoppingPage(){
                 <h1 className = "title">Shopping</h1>
                 <h1>Toys</h1>
                 <div className="scroll-panel">
-                    <div className="square" onClick={() => openModal("Toy 1")}>1</div>
-                    <div className="square" onClick={() => openModal("Toy 2")}>2</div>
-                    <div className="square" onClick={() => openModal("Toy 3")}>3</div>
-                    <div className="square" onClick={() => openModal("Toy 4")}>4</div>
-                    <div className="square" onClick={() => openModal("Toy 5")}>5</div>
-                    <div className="square" onClick={() => openModal("Toy 6")}>6</div>
+                    <div className="square" onClick={() => openModal("Model Boeing 737")}>
+                        <img src = "images/airplanetoy.jpg" alt = "Model Boeing 737" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("AA Plush Plane")}>
+                        <img src = "images/toy2.webp" alt = "AA Plush Plane" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Delta Plush Plane")}>
+                        <img src = "images/toy3.webp" alt = "Delta Plush Plane" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Blue Angel Plush Plane")}>
+                        <img src = "images/toy4.avif" alt = "Blue Angel Plush Plane" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Southwest Plush Plane")}>
+                        <img src = "images/toy5.avif" alt = "Southwest Plush Plane" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Space Shuttle Plush")}>
+                        <img src = "images/toy6.avif" alt = "Space Shuttle Plush" className = "toy"></img>
+                    </div>
                 </div>
                 <h1>Clothing</h1>
                 <div className="scroll-panel">
-                    <div className="square" onClick={() => openModal("Clothing 1")}>1</div>
-                    <div className="square" onClick={() => openModal("Clothing 2")}>2</div>
-                    <div className="square" onClick={() => openModal("Clothing 3")}>3</div>
-                    <div className="square" onClick={() => openModal("Clothing 4")}>4</div>
-                    <div className="square" onClick={() => openModal("Clothing 5")}>5</div>
-                    <div className="square" onClick={() => openModal("Clothing 6")}>6</div>
+                    <div className="square" onClick={() => openModal("AA Sweatshirt")}>
+                        <img src = "images/AASweatShirt2.webp" alt = "AA Sweatshirt" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("AA Hoodie")}>
+                        <img src = "images/airlinesweatshirt.webp" alt = "AA Hoodie" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Clothing 3")}>
+                        <img src = "images/hoodie2.webp" alt = "Piedmont Livery Hoodie" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("US Airways Livery Hoodie")}>
+                        <img src = "images/hoodie3.webp" alt = "US Airways Livery Hoodie" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("AA Zipped Hoodie")}>
+                        <img src = "images/hoodie4.webp" alt = "AA Zipped Hoodie" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("TWA Black Bomber")}>
+                        <img src = "images/hoodie5.webp" alt = "TWA Black Bomber" className = "toy"></img>
+                    </div>
                 </div>
-                <h1>Merchandice</h1>
+                
+                {/* <h1>Merchandice</h1>
                 <div className="scroll-panel">
                     <div className="square" onClick={() => openModal("Merch 1")}>1</div>
                     <div className="square" onClick={() => openModal("Merch 2")}>2</div>
@@ -106,21 +131,28 @@ function ShoppingPage(){
                     <div className="square" onClick={() => openModal("Merch 4")}>4</div>
                     <div className="square" onClick={() => openModal("Merch 5")}>5</div>
                     <div className="square" onClick={() => openModal("Merch 6")}>6</div>
-                </div>
-                <h1>Airplane Memorabilia</h1>
+                </div> */}
+                
+                <h1>Airplane Mugs</h1>
                 <div className="scroll-panel">
-                    <div className="square" onClick={() => openModal("Model Boeing 787")}>
-                        <img src = "images/airplanetoy.jpg" alt = "Model Boeing 787" className = "toy"></img>
+                    <div className="square" onClick={() => openModal("Air India Mug")}>
+                        <img src = "images/airlinemug3.avif" alt = "Air Cal Mug" className = "toy"></img>
                     </div>
-                    <div className="square" onClick={() => openModal("AA Hoodie")}>
-                        <img src = "images/airlinesweatshirt.webp" alt = "AA Hoodie" className = "toy"></img>
+                    <div className="square" onClick={() => openModal("New Zealand Air Mug")}>
+                        <img src = "images/airlinemug4.webp" alt = "New Zealand Air Mug" className = "toy"></img>
                     </div>
-                    <div className="square" onClick={() => openModal("AA Sweatshirt")}>
-                        <img src = "images/AASweatShirt2.webp" alt = "AA Sweatshirt" className = "toy"></img>
+                    <div className="square" onClick={() => openModal("Alaskan Costal Airlines Mug")}>
+                        <img src = "images/airlinemug5.webp" alt = "Alaskan Costal Airlines Mug" className = "toy"></img>
                     </div>
-                    <div className="square" onClick={() => openModal("Airplane Item 4")}>4</div>
-                    <div className="square" onClick={() => openModal("Airplane Item 5")}>5</div>
-                    <div className="square" onClick={() => openModal("Airplane Item 6")}>6</div>
+                    <div className="square" onClick={() => openModal("Air Cal Mug")}>
+                        <img src = "images/airlinemug.avif" alt = "Air Cal Mug" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("Air France Mug")}>
+                        <img src = "images/airlinemug2.avif" alt = "Air France Mug" className = "toy"></img>
+                    </div>
+                    <div className="square" onClick={() => openModal("ANA Mug")}>
+                        <img src = "images/airlinemug6.avif" alt = "ANA Mug" className = "toy"></img>
+                    </div>
                 </div>
             </div>
 
