@@ -1,5 +1,7 @@
 Project: Last Choice Airlines In-Flight Entertainment System
 
+****To Run this program, run from the Home_Screen.html with Live Server
+
 Team Members:
 Dennette Affinito
 Josh Santhosh
