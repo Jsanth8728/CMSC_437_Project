@@ -354,7 +354,8 @@ body.dark-mode {
     color: #e5e5e5;
 }
 
-body.dark-mode .preference-card {
+body.dark-mode .preference-card,
+body.dark-mode .welcome-msg {
     background: #1e1e1e;
     color: #e5e5e5;
     border: 1px solid #333;
