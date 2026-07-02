@@ -149,6 +149,6 @@ function showCart() {
     
         );
 }
-function getAnnouncements(){
-    const announncements
-}
+// function getAnnouncements(){
+//     const announncements
+// }

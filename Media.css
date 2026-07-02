@@ -1,110 +1,12 @@
 /* ---------------- Whole Page ---------------- */
 
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:linear-gradient(90deg,#4d4da1,rgb(0,0,116));
-    background-size:cover;
-}
-
-.page{
-    display:flex;
-    width:1100px;
-    height:700px;
-    margin:20px auto;
-    background:white;
-    border:2px solid black;
-}
-
-/* ---------------- Sidebar ---------------- */
-
-.sidebar{
-    width:90px;
-    border-right:2px solid black;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    padding-top:20px;
-    gap:20px;
-}
-
-.nav-icon{
-    width:55px;
-    cursor:pointer;
-}
-
-/* ---------------- Main ---------------- */
-
-.main{
-    flex:1;
-    padding:15px;
-
-    display:flex;
-    flex-direction:column;
-}
-
-/* ---------------- Top Banner ---------------- */
-.back-button {
-    width: 90px;
-    height: 50px;
-    border: 2px solid black;
-    border-radius: 10px;
-    background: white;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-}
-
-.media-banner{
-    display:flex;
-    gap:15px;
-    margin-bottom:20px;
-}
-
-.announcement{
-    flex:1;
-}
-
-.eta{
-    width:90px;
-}
-
-.login{
-    width:110px;
-}
-
-.back-button{
-    width:90px;
-    cursor:pointer;
-}
-
-.announcement,
-.eta,
-.login,
-.back-button{
-    background:white;
-    border:2px solid black;
-    border-radius:10px;
-    height:50px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-weight:bold;
-}
-
-/* ---------------- Content ---------------- */
-
 .media-content{
     flex:1;
     display:flex;
     gap:25px;
     overflow:hidden;
     min-width:0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* ---------------- Left Panel ---------------- */
@@ -119,6 +21,8 @@ body{
 
 .recommendation-box, 
 .bookmark-box {
+    margin-top:15px;
+    margin-left:25px;
     background:white;
     border-radius:15px;
     padding:15px;
