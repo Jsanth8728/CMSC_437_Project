@@ -72,7 +72,7 @@ function HelpPage() {
                 <div className="safety-overlay active">
                     <div className="safety-box">
                         <h2>Safety</h2>
-                        <img src = "images/Airplane safety.jpg" alt="Airplane Safety Card" class="safetyCard"/>
+                        <img src = "images/AirplaneSafety.jpg" alt="Airplane Safety Card" class="safetyCard"/>
                         <div className="feedback-buttons">
                             <button onClick={closeSafety}>Back</button>
                         </div>
