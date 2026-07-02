@@ -1,4 +1,13 @@
 //  Displays top bar of all pages, used for navigating between pages
+function isLoggedIn() {
+    return localStorage.getItem("loggedIn") === "true";
+}
+
+function logout() {
+    localStorage.setItem("loggedIn", "false");
+    window.location.href = "Home_Screen.html";
+}
+
 function showTopBar() {
     const [menuOpen, setMenuOpen] = React.useState(false);
     const isHomePage = (document.title === "Food and Drinks" || document.title === "Shopping" || document.title === "Phone");
@@ -52,9 +61,10 @@ function showTopBar() {
 
             <button className="announcement">Announcements</button>
             <button className="eta" id="eta">{showETA()}</button>
-            <button className="login"
-                onClick={() => window.location.href = "Login_Screen.html"}
-            >Login</button>
+            {isLoggedIn() ? (<button className="login" onClick={logout}>Logout</button>) : 
+                (<button className="login" onClick={() => window.location.href = "Login_Screen.html"}>
+                Login</button>
+            )}
         </div>
     );
 }
