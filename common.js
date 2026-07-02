@@ -60,7 +60,7 @@ function showTopBar() {
             )}
 
             <button className="announcement">Announcements</button>
-            <button className="eta" id="eta">{showETA()}</button>
+            <button className="eta" id="eta"></button>
             {isLoggedIn() ? (<button className="login" onClick={logout}>Logout</button>) : 
                 (<button className="login" onClick={() => window.location.href = "Login_Screen.html"}>
                 Login</button>
@@ -69,9 +69,34 @@ function showTopBar() {
     );
 }
 
+let etaHours = 3;
+let etaMinutes = 30;
+let etaSeconds = 60;
 function showETA() {
-    return "ETA: 2:30 PM CEST";
+    const eta = document.getElementById("eta");
+    console.log("eta");
+    etaSeconds -= 1;
+   if (etaSeconds < 0) {
+        etaSeconds = 59;
+        etaMinutes--;
+    }
+
+    if (etaMinutes < 0) {
+        etaMinutes = 59;
+        etaHours--;
+    }
+
+    // stop at 0
+    if (etaHours < 0) {
+        etaHours = 0;
+        etaMinutes = 0;
+        etaSeconds = 0;
+    }
+    const formatted = String(etaHours).padStart(2, "0") + ":" +
+    String(etaMinutes).padStart(2, "0") + ":" + String(etaSeconds).padStart(2, "0");
+    eta.textContent = "ETA: " + formatted;
 }
+setInterval(showETA, 1000);
 
 function showCart() {
     const [selectedProduct, setSelectedProduct] = React.useState(null);
