@@ -150,5 +150,6 @@ function showCart() {
         );
 }
 function getAnnouncements(){
-    const announncements
+    const announncements = [];
+    return announncements;
 }
