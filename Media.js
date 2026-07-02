@@ -1,5 +1,4 @@
 function MediaPage() {
-    console.log("Media.js loaded");
     const attraction = [
         {
             title: "The Louvre",

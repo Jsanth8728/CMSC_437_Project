@@ -1,100 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Login Screen</title>
-    <link rel="stylesheet" href="Home_Screen.css">
-    <link rel="stylesheet" href="Media.css">
-    <link rel="stylesheet" href="Login_Screen.css">
-</head>
-
-<body>
-<div class="homepage">
-
-    <!-- Left Menu -->
-    <span class="menu">
-        <span>
-            <a href="#">
-                <img src="images/profilepic.png"
-                     alt="Profile"
-                     class="profile-pic">
-            </a>
-        </span>
-        <span>
-            <a href="Media.html">
-                <img src="images/Clapboard.png"
-                     alt="Entertainment"
-                     class="clapboard-pic">
-            </a>
-        </span>
-        <span>
-            <a href="Travel.html">
-                <img src="images/AirplaneIcon.png"
-                     alt="Travel"
-                     class="airplane-pic">
-            </a>
-        </span>
-        <span>
-            <a href="Shopping.html">
-                <img src="images/ShoppingBag.png"
-                     alt="Shopping"
-                     class="shopping-pic">
-            </a>
-        </span>
-        <span>
-            <a href="Food.html">
-                <img src="images/ForkKnife.png"
-                     alt="Food"
-                     class="food-pic">
-            </a>
-        </span>
-        <span>
-            <a href="Help.html">
-                <img src="images/Help.png"
-                     alt="Help"
-                     class="help-pic">
-            </a>
-        </span>
-    </span>
-
-    <!-- Main Content -->
-    <div class="topbar">
-
-        <!-- Top Banner -->
-        <div class="media-banner">
-            <div class="announcement">
-                Announcements
-            </div>
-            <div class="eta">
-                ETA
-            </div>
-            <button class="back-button"
-                    onclick="window.location.href='Home_Screen.html'">
-                Back
-            </button>
-        </div>
-
-        <!-- Login / Guest Section -->
-        <div class="login-container">
-
-            <!-- Login Box -->
-            <div class="login-box">
-                <h2>Login</h2>
-                <input type="text" id="username" placeholder="Username">
-                <input type="password" id="password" placeholder="Password">
-                <button class="login-btn" onclick="login()">Login</button>
-            </div>
-
-            <!-- Guest Box -->
-            <div class="guest-box">
-                <h2>Continue as Guest</h2>
-                <p>Browse the site without creating an account.</p>
-                <button class="guest-btn" onclick="guestLogin()">Proceed as Guest</button>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="Login_Screen.js"></script>
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Login Screen</title>
+        <link rel="stylesheet" href="Login_Screen.css">
+        <link rel="stylesheet" href="common.css">
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <!-- Don't use this in production: -->
+        <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+        <script src="common.js" type ="text/babel"></script>
+        <script src="Login_Screen.js" type = "text/babel"></script>
+    </head>
+    
+    <body>
+        <div id="root"></div>
+        <script type = "text/babel">
+            const container = document.getElementById('root');
+            const root = ReactDOM.createRoot(container);
+            root.render(<MyApp />);
+            function MyApp(){
+                return(<LoginPage />);
+            }
+        </script>
+    </body>
 </html>

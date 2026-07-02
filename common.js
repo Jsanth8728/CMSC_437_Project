@@ -53,7 +53,7 @@ function showTopBar() {
             <button className="announcement">Announcements</button>
             <button className="eta" id="eta">{showETA()}</button>
             <button className="login"
-                onClick={() => window.location.href = "Login.html"}
+                onClick={() => window.location.href = "Login_Screen.html"}
             >Login</button>
         </div>
     );
