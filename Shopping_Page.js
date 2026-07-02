@@ -41,6 +41,10 @@ function ShoppingPage(){
         setCartItems(prevItems => prevItems.filter(item => item.name !== productName));
     }
 
+    function clearCart() {
+        setCartItems([]);
+    }
+
     function changeQuantity(productName, delta) {
         setCartItems(prevItems =>
             prevItems
@@ -51,6 +55,14 @@ function ShoppingPage(){
                 )
                 .filter(item => item.quantity > 0)
         );
+    }
+
+    const [creditOpen, setCreditOpen] = React.useState(false);
+    function openCredit() {
+        setCreditOpen(true);
+    }
+    function closeCredit() {
+        setCreditOpen(false);
     }
 
     const totalItemCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
@@ -142,7 +154,7 @@ function ShoppingPage(){
                     )}
                 </div>
                 <div>
-                    <button className="BuyNowButton" >Buy Now</button>
+                    <button className="BuyNowButton" onClick = {setCreditOpen}>Buy Now</button>
                 </div>
             </div>
 
@@ -153,7 +165,22 @@ function ShoppingPage(){
             {menuOpen && (
                 <div className="menu-backdrop" onClick={() => setMenuOpen(false)}></div>
             )}
-
+            
+            {creditOpen && (
+                <div className="credit-overlay active">
+                    <div className="credit-box">
+                        <h2>Please enter your credit card information below</h2>
+                        <p></p>
+                        <input type="text" placeholder="Credit Card Number" />
+                        <input type="text" placeholder="CVV" />
+                        <input type="text" placeholder="Exp. Date" />
+                        <div className="credit-buttons">
+                            <button onClick={() => {clearCart(); closeCredit();}}>Pay</button>
+                            <button onClick={closeCredit}>Back</button>
+                        </div>
+                    </div>
+                </div>
+            )}
 
         </div>
     )

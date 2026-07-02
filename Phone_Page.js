@@ -1,52 +1,3 @@
-// function PhonePage(){
-//     const [dialInput, setDialInput] = React.useState("");
-
-//     function handleNumberClick(value) {
-//         if (value === "&#8592;") {
-//             setDialInput(prev => prev.slice(0, -1));
-//         } else if (value !== "Call") {
-//             setDialInput(prev => prev + value);
-//         }
-//     }
-
-//     return(
-//         <div className = "phonePage">
-//             <div className = "newTopBar">
-//                 {showTopBar()}
-//                 {showCart()}
-//             </div>
-
-//             <div className = "phoneSection">
-//                 <div className = "OuterPhoneBox">
-//                     <div className="InputSection">{dialInput}</div>
-//                     <div className = "NumbersSection">
-//                         <div className = "rows">
-//                             <div className="number" onClick={() => handleNumberClick("1")}>1</div>
-//                             <div className="number" onClick={() => handleNumberClick("2")}>2</div>
-//                             <div className="number" onClick={() => handleNumberClick("3")}>3</div>
-//                         </div>
-//                         <div className = "rows">
-//                             <div className="number" onClick={() => handleNumberClick("4")}>4</div>
-//                             <div className="number" onClick={() => handleNumberClick("5")}>5</div>
-//                             <div className="number" onClick={() => handleNumberClick("6")}>6</div>
-//                         </div>
-//                         <div className = "rows">
-//                             <div className="number" onClick={() => handleNumberClick("7")}>7</div>
-//                             <div className="number" onClick={() => handleNumberClick("8")}>8</div>
-//                             <div className="number" onClick={() => handleNumberClick("9")}>9</div>
-//                         </div>
-//                         <div className = "rows">
-//                             <div className="number" onClick={() => handleNumberClick("&#8592;")}>&#8592;</div>
-//                             <div className="number" onClick={() => handleNumberClick("0")}>0</div>
-//                             <div className="number" onClick={() => addToCart("Phone Call")}>Call</div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
 function PhonePage(){
     const [selectedProduct, setSelectedProduct] = React.useState(null);
     const [cartOpen, setCartOpen] = React.useState(false);
@@ -91,6 +42,10 @@ function PhonePage(){
         );
     }
 
+    function clearCart() {
+        setCartItems([]);
+    }
+
     const totalItemCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
     const [dialInput, setDialInput] = React.useState("");
@@ -101,6 +56,14 @@ function PhonePage(){
         } else if (value !== "Call") {
             setDialInput(prev => prev + value);
         }
+    }
+
+    const [creditOpen, setCreditOpen] = React.useState(false);
+    function openCredit() {
+        setCreditOpen(true);
+    }
+    function closeCredit() {
+        setCreditOpen(false);
     }
 
     return(
@@ -208,9 +171,25 @@ function PhonePage(){
                     )}
                 </div>
                 <div>
-                    <button className="BuyNowButton" >Buy Now</button>
+                    <button className="BuyNowButton" onClick = {setCreditOpen} >Buy Now</button>
                 </div>
             </div>
+
+            {creditOpen && (
+                <div className="credit-overlay active">
+                    <div className="credit-box">
+                        <h2>Please enter your credit card information below</h2>
+                        <p></p>
+                        <input type="text" placeholder="Credit Card Number" />
+                        <input type="text" placeholder="CVV" />
+                        <input type="text" placeholder="Exp. Date" />
+                        <div className="credit-buttons">
+                            <button onClick={() => {clearCart(); closeCredit();}}>Pay</button>
+                            <button onClick={closeCredit}>Back</button>
+                        </div>
+                    </div>
+                </div>
+            )}
 
         </div>
     );
