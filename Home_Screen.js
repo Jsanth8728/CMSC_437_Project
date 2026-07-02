@@ -127,7 +127,7 @@ function HomePage() {
             <div>{showTopBar()}</div>
             <div className="welcome-msg">
                 <h1>Welcome to Last Choice Airways!</h1>
-                {/* Display Logo here */}
+                <img src="images/AirlineLogo.png" alt="Last Choice Airlines Logo" className="airline-logo"/>
                 <h3>
                     Welcome aboard! Use your personal in-flight hub to customize your
                     experience on Last Choice Airways. Your preferences are saved throughout
