@@ -1,4 +1,6 @@
 function MediaPage() {
+    const [hoveredItem, sethoveredItem] = React.useState(null);
+
     const attraction = [
         {
             title: "The Louvre",
@@ -204,10 +206,12 @@ function MediaPage() {
                     <div className="media-box">
                         <h2>Movies</h2>
                         <div className="scroll-row">
-                            {movies.map(movie => (<div key={movie.title} className="card">
-                                    <h3 className="card-title"> {movie.title}</h3>
-                                    <img src={movie.image} alt={movie.title}/>
-                                    <button className="favorite-btn" onClick={() => addFavorite(movie)}>❤️ Favorite</button>
+                            {movies.map(movie => (<div key={movie.title} className="card"
+                                onMouseEnter={() => sethoveredItem(movie)}
+                                onMouseLeave={() => sethoveredItem(null)}>
+                                <h3 className="card-title"> {movie.title}</h3>
+                                <img src={movie.image} alt={movie.title}/>
+                                <button className="favorite-btn" onClick={() => addFavorite(movie)}>❤️ Favorite</button>
                             </div>
                             ))}
                         </div>
@@ -215,10 +219,12 @@ function MediaPage() {
                     <div className="media-box">
                         <h2>TV Shows</h2>
                         <div className="scroll-row">
-                            {tvShow.map(tvShow => (<div key={tvShow.title} className="card">
-                                    <h3 className="card-title"> {tvShow.title}</h3>
-                                    <img src={tvShow.image} alt={tvShow.title}/>
-                                    <button className="favorite-btn" onClick={() => addFavorite(tvShow)}>❤️ Favorite</button>
+                            {tvShow.map(tvShow => (<div key={tvShow.title} className="card"
+                                onMouseEnter={() => sethoveredItem(tvShow)}
+                                onMouseLeave={() => sethoveredItem(null)}>
+                                <h3 className="card-title"> {tvShow.title}</h3>
+                                <img src={tvShow.image} alt={tvShow.title}/>
+                                <button className="favorite-btn" onClick={() => addFavorite(tvShow)}>❤️ Favorite</button>
                             </div>
                             ))}
                         </div>
@@ -226,10 +232,12 @@ function MediaPage() {
                     <div className="media-box">
                         <h2>Music</h2>
                         <div className="scroll-row">
-                            {music.map(music => (<div key={music.title} className="music-card">
-                                    <h3 className="card-title"> {music.title}</h3>
-                                    <img src={music.image} alt={music.title}/>
-                                    <button className="favorite-btn" onClick={() => addFavorite(music)}>❤️ Favorite</button>
+                            {music.map(music => (<div key={music.title} className="music-card"
+                                onMouseEnter={() => sethoveredItem(music)}
+                                onMouseLeave={() => sethoveredItem(null)}>
+                                <h3 className="card-title"> {music.title}</h3>
+                                <img src={music.image} alt={music.title}/>
+                                <button className="favorite-btn" onClick={() => addFavorite(music)}>❤️ Favorite</button>
                             </div>
                             ))}
                         </div>
@@ -237,15 +245,23 @@ function MediaPage() {
                     <div className="media-box">
                         <h2>Attractions</h2>
                         <div className="scroll-row">
-                            {attraction.map(attraction => (<div key={attraction.title} className="music-card">
-                                    <h3 className="card-title"> {attraction.title}</h3>
-                                    <img src={attraction.image} alt={attraction.title}/>
-                                    <button className="favorite-btn" onClick={() => addFavorite(attraction)}>❤️ Favorite</button>
+                            {attraction.map(attraction => (<div key={attraction.title} className="music-card"
+                                onMouseEnter={() => sethoveredItem(attraction)}
+                                onMouseLeave={() => sethoveredItem(null)}>
+                                <h3 className="card-title"> {attraction.title}</h3>
+                                <img src={attraction.image} alt={attraction.title}/>
+                                <button className="favorite-btn" onClick={() => addFavorite(attraction)}>❤️ Favorite</button>
                             </div>
                             ))}
                         </div>
                     </div>
                 </div>
+                {/* Displays Metadata */}
+                {hoveredItem && (<div className="metadata-popup">
+                    <h4>{hoveredItem.title}</h4>
+                    <p>Metadata gets displayed here</p>
+                </div>
+                )}
             </div>
         </div>
     );
